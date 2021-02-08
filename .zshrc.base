@@ -55,9 +55,9 @@ autoload -U compinit
 compinit
 
 case "${OSTYPE}" in
-# MacOSX
+# macOS
 darwin*)
-    [ -f ~/.zshrc.osx ] && source ~/.zshrc.osx
+    [ -f ~/.zshrc.macos ] && source ~/.zshrc.macos
     ;;
 linux*)
     [ -f ~/.zshrc.linux ] && source ~/.zshrc.linux
