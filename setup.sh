@@ -38,6 +38,8 @@ case "$(uname)" in
         ); export DOT_FILES
 esac
 
+mkdir -p ~/.ssh
+
 # install zprezto
 git clone --recursive ${ZPREZTO_GITHUB} "${ZDOTDIR:-$HOME}/.zprezto"
 setopt EXTENDED_GLOB
