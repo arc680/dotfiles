@@ -12,3 +12,5 @@ if test ! $(which brew); then
     brew tap homebrew/bundle
     brew tap caskroom/cask
 fi
+
+# ln -s ${DOTDIR}/pkg/vsc-settings.json ~/Library/Application\ Support/Code/User/settings.json
