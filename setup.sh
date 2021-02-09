@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOT=~/dotfiles; export DOT
+DOT=~/code/src/github.com/arc680/dotfiles; export DOT
 DOT_GITHUB="git@github.com:arc680/dotfiles.git"; export DOT_GITHUB
 ZPREZTO_GITHUB="https://github.com/sorin-ionescu/prezto.git"; export ZPREZTO_GITHUB
 case "$(uname)" in
@@ -38,13 +38,13 @@ case "$(uname)" in
         ); export DOT_FILES
 esac
 
-mkdir -p ~/.ssh ~/.vim/bundle
+mkdir -p ~/.ssh ~/.vim/bundle ${DOT}
 
 # install zprezto
-git clone --recursive ${ZPREZTO_GITHUB} "${ZDOTDIR:-$HOME}/.zprezto"
+git clone --recursive ${ZPREZTO_GITHUB} ~/.zprezto
 setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+for rcfile in ~/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "~/.${rcfile:t}"
 done
 
 # install dotfiles
