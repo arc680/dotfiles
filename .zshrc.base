@@ -1,7 +1,3 @@
-POWERLEVEL9K_MODE='nerdfont-complete'
-#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-#POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-
 # ssh agent
 agent="$HOME/.ssh/ssh-agent-$USER"
 if [ -S "$SSH_AUTH_SOCK" ]; then
