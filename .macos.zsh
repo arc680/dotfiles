@@ -21,7 +21,7 @@ fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-export GOPATH=$HOME/go
+export GOPATH=$HOME/code
 export PATH=$PATH:$GOPATH/bin
 
 [ -f ~/.local.macos.zsh ] && source ~/.local.macos.zsh
