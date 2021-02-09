@@ -55,10 +55,10 @@ compinit
 case "${OSTYPE}" in
 # macOS
 darwin*)
-    [ -f ~/.zshrc.macos ] && source ~/.zshrc.macos
+    [ -f ~/.macos.zsh ] && source ~/.macos.zsh
     ;;
 linux*)
-    [ -f ~/.zshrc.linux ] && source ~/.zshrc.linux
+    [ -f ~/.linux.zsh ] && source ~/.linux.zsh
     ;;
 esac
 
