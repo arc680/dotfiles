@@ -38,7 +38,7 @@ case "$(uname)" in
         ); export DOT_FILES
 esac
 
-mkdir -p ~/.ssh
+mkdir -p ~/.ssh ~/.vim/bundle
 
 # install zprezto
 git clone --recursive ${ZPREZTO_GITHUB} "${ZDOTDIR:-$HOME}/.zprezto"
@@ -53,6 +53,9 @@ for file in ${DOT_FILES[@]}
 do
     yes | ln -s ${DOT}/${file} ~/${file}
 done
+
+# neobundle
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
 echo "Complete: please restart Terminal and continue manual settings"
 
