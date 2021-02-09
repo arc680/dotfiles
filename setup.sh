@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DOT=~/code/src/github.com/arc680/dotfiles; export DOT
-DOT_GITHUB="git@github.com:arc680/dotfiles.git"; export DOT_GITHUB
+DOT_GITHUB="https://github.com/arc680/dotfiles.git"; export DOT_GITHUB
 ZPREZTO_GITHUB="https://github.com/sorin-ionescu/prezto.git"; export ZPREZTO_GITHUB
 case "$(uname)" in
     "Darwin")
