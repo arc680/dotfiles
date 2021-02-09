@@ -40,6 +40,8 @@ esac
 
 mkdir -p ~/.ssh ~/.vim/bundle ${DOT}
 
+zsh
+
 # install zprezto
 git clone --recursive ${ZPREZTO_GITHUB} "${ZDOTDIR:-$HOME}"/.zprezto
 setopt EXTENDED_GLOB
