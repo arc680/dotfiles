@@ -14,6 +14,7 @@ case "$(uname)" in
         .zshrc
         .base.zsh
         .macos.zsh
+        .p10k.zsh
         ); export DOT_FILES;;
     "Linux")
         DOT_FILES=(
@@ -25,6 +26,7 @@ case "$(uname)" in
         .zshrc
         .base.zsh
         .linux.zsh
+        .p10k.zsh
         ); export DOT_FILES;;
     *)
         DOT_FILES=(
@@ -35,6 +37,7 @@ case "$(uname)" in
         .zprofile
         .zshrc
         .base.zsh
+        .p10k.zsh
         ); export DOT_FILES
 esac
 
