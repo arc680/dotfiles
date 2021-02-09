@@ -7,5 +7,5 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Customize to your needs...
-[ -f ~/.zshrc.base ] && source ~/.zshrc.base
+[ -f ~/.base.zsh ] && source ~/.base.zsh
 

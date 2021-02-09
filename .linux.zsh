@@ -15,23 +15,6 @@ if [ -x $HOME/local/bin/tmux ]; then
     fi
 fi
 
-#alias vim='/home/hmaruyam/local/bin/vim'
-
-# 複数の zsh を同時に使う時など history ファイルに上書きせず追加する
-setopt append_history
-# zsh の開始・終了時刻をヒストリファイルに書き込む
-setopt extended_history
-# 直前と同じコマンドラインはヒストリに追加しない
-setopt hist_ignore_dups
-# コマンドラインの先頭がスペースで始まる場合ヒストリに追加しない
-setopt hist_ignore_space
-# シェルのプロセスごとに履歴を共有
-setopt share_history
-# history (fc -l) コマンドをヒストリリストから取り除く。
-setopt hist_no_store
-# ヒストリを呼び出してから実行する間に一旦編集できる状態になる
-setopt hist_verify
-
 #agent="$HOME/tmp/ssh-agent-$USER"
 #if [ -S "$SSH_AUTH_SOCK" ]; then
 #    case $SSH_AUTH_SOCK in
@@ -67,7 +50,7 @@ if [[ $ZSH_VERSION == (<5->|4.<4->|4.3.<10->)* ]]; then
     RPROMPT="%1(v|%F{green}%1v%f|)"
 fi
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
 
-[ -f ~/.zshrc.linux.local ] && source ~/.zshrc.linux.local
+[ -f ~/.local.linux.zsh ] && source ~/.local.linux.zsh

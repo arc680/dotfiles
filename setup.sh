@@ -12,8 +12,8 @@ case "$(uname)" in
         .zpreztorc
         .zprofile
         .zshrc
-        .zshrc.base
-        .zshrc.macos
+        .base.zsh
+        .macos.zsh
         ); export DOT_FILES;;
     "Linux")
         DOT_FILES=(
@@ -23,8 +23,8 @@ case "$(uname)" in
         .zpreztorc
         .zprofile
         .zshrc
-        .zshrc.base
-        .zshrc.linux
+        .base.zsh
+        .linux.zsh
         ); export DOT_FILES;;
     *)
         DOT_FILES=(
@@ -34,7 +34,7 @@ case "$(uname)" in
         .zpreztorc
         .zprofile
         .zshrc
-        .zshrc.base
+        .base.zsh
         ); export DOT_FILES
 esac
 
