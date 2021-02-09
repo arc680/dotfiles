@@ -54,7 +54,7 @@ done
 git clone ${DOT_GITHUB} ${DOT}
 for file in ${DOT_FILES[@]}
 do
-    yes | ln -s ${DOT}/${file} ~/${file}
+    ln -sf ${DOT}/${file} ~/${file}
 done
 
 # neobundle
