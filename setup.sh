@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 DOT=~/code/src/github.com/arc680/dotfiles; export DOT
 DOT_GITHUB="https://github.com/arc680/dotfiles.git"; export DOT_GITHUB
@@ -39,8 +39,6 @@ case "$(uname)" in
 esac
 
 mkdir -p ~/.ssh ~/.vim/bundle ${DOT}
-
-zsh
 
 # install zprezto
 git clone --recursive ${ZPREZTO_GITHUB} "${ZDOTDIR:-$HOME}"/.zprezto
