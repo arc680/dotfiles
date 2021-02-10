@@ -97,9 +97,10 @@ filetype off
 if version > 703
     if has('vim_starting')
         set runtimepath+=~/.vim/bundle/neobundle.vim
-        call neobundle#rc(expand('~/.vim/bundle/'))
         let g:neobundle_default_git_protocol='git'
     endif
+
+    call neobundle#begin(expand('~/.vim/bundle/'))
 
     " Let NeoBundle manage NeoBundle
     NeoBundleFetch 'https://github.com/Shougo/neobundle.vim.git'
@@ -137,6 +138,7 @@ if version > 703
     "NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim/'
     "NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 
+    call neobundle#end()
     " ...
 
     filetype plugin indent on     " Required!
@@ -189,6 +191,7 @@ if version > 703
     endif
     inoremap <expr><TAB> pumvisible() ?  "\<C-n>" : "\<TAB>"
     inoremap <expr><S-TAB> pumvisible() ?  "\<C-p>" : "\<S-TAB>"
+
 endif
 
 " テンプレ挿入
