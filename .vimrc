@@ -102,11 +102,11 @@ if version > 703
     endif
 
     " Let NeoBundle manage NeoBundle
-    NeoBundleFetch 'git://github.com/Shougo/neobundle.vim.git'
-    NeoBundle 'git://github.com/Shougo/neocomplcache.git'
+    NeoBundleFetch 'https://github.com/Shougo/neobundle.vim.git'
+    NeoBundle 'https://github.com/Shougo/neocomplcache.git'
     "NeoBundle 'git://github.com/Shougo/neosnippet.vim.git'
-    NeoBundle 'git://github.com/Shougo/unite.vim.git'
-    NeoBundle "git://github.com/Shougo/neocomplete.vim"
+    NeoBundle 'https://github.com/Shougo/unite.vim.git'
+    NeoBundle "https://github.com/Shougo/neocomplete.vim"
     "NeoBundleFetch 'Shougo/neobundle.vim'
     "NeoBundleFetch 'Shougo/neocomplcache'
     "NeoBundleFetch 'Shougo/unite.vim'
