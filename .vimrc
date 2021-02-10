@@ -97,7 +97,6 @@ filetype off
 if version > 703
     if has('vim_starting')
         set runtimepath+=~/.vim/bundle/neobundle.vim
-        let g:neobundle_default_git_protocol='git'
     endif
 
     call neobundle#begin(expand('~/.vim/bundle/'))
@@ -105,9 +104,9 @@ if version > 703
     " Let NeoBundle manage NeoBundle
     NeoBundleFetch 'https://github.com/Shougo/neobundle.vim.git'
     NeoBundle 'https://github.com/Shougo/neocomplcache.git'
-    "NeoBundle 'git://github.com/Shougo/neosnippet.vim.git'
+    "NeoBundle 'https://github.com/Shougo/neosnippet.vim.git'
     NeoBundle 'https://github.com/Shougo/unite.vim.git'
-    NeoBundle "https://github.com/Shougo/neocomplete.vim"
+    "NeoBundle 'https://github.com/Shougo/neocomplete.vim'
     "NeoBundleFetch 'Shougo/neobundle.vim'
     "NeoBundleFetch 'Shougo/neocomplcache'
     "NeoBundleFetch 'Shougo/unite.vim'
@@ -129,7 +128,7 @@ if version > 703
     "NeoBundle 'FuzzyFinder'
     "NeoBundle 'rails.vim'
     " Non github repos
-    "NeoBundle 'git://git.wincent.com/command-t.git'
+    "NeoBundle 'https://git.wincent.com/command-t.git'
     " gist repos
     "NeoBundle 'gist:Shougo/656148', {
     "      \ 'name': 'everything.vim',
@@ -137,8 +136,6 @@ if version > 703
     " Non git repos
     "NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim/'
     "NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
-
-    call neobundle#end()
     " ...
 
     filetype plugin indent on     " Required!
@@ -148,30 +145,30 @@ if version > 703
     " :NeoBundleInstall(!)    - install(update) bundles
     " :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
 
-    " Installation check.
-    NeoBundleCheck
-
-
     "" neocomplcache
     " if_luaが有効ならneocompleteを使う
     NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
     
-    if neobundle#is_installed('neocomplete')
-        " neocomplete用設定
-        " Disable AutoComplPop.
-        let g:acp_enableAtStartup = 0
-        let g:neocomplete#enable_at_startup = 1
-        let g:neocomplete#enable_ignore_case = 1
-        let g:neocomplete#enable_smart_case = 1
-        let g:neocomplete#sources#syntax#min_keyword_length = 3
-        let g:neocomplete#lock_buffer_name_pattern = '¥*ku¥*'
-        if !exists('g:neocomplete#keyword_patterns')
-            let g:neocomplete#keyword_patterns = {}
-        endif
-        let g:neocomplete#keyword_patterns['default'] = '\h\w*
-        inoremap <expr><C-g> neocomplete#undo_completion()
-        inoremap <expr><C-l> neocomplete#complete_common_string()
-    elseif neobundle#is_installed('neocomplcache')
+    " Installation check.
+    NeoBundleCheck
+    
+    "if neobundle#is_installed('neocomplete')
+    "    " neocomplete用設定
+    "    " Disable AutoComplPop.
+    "    let g:acp_enableAtStartup = 0
+    "    let g:neocomplete#enable_at_startup = 1
+    "    let g:neocomplete#enable_ignore_case = 1
+    "    let g:neocomplete#enable_smart_case = 1
+    "    let g:neocomplete#sources#syntax#min_keyword_length = 3
+    "    let g:neocomplete#lock_buffer_name_pattern = '¥*ku¥*'
+    "    if !exists('g:neocomplete#keyword_patterns')
+    "        let g:neocomplete#keyword_patterns = {}
+    "    endif
+    "    let g:neocomplete#keyword_patterns['default'] = '\h\w*
+    "    inoremap <expr><C-g> neocomplete#undo_completion()
+    "    inoremap <expr><C-l> neocomplete#complete_common_string()
+    "elseif neobundle#is_installed('neocomplcache')
+    if neobundle#is_installed('neocomplcache')
         " neocomplcache用設定
         " Disable AutoComplPop.
         let g:acp_enableAtStartup = 0
@@ -191,6 +188,8 @@ if version > 703
     endif
     inoremap <expr><TAB> pumvisible() ?  "\<C-n>" : "\<TAB>"
     inoremap <expr><S-TAB> pumvisible() ?  "\<C-p>" : "\<S-TAB>"
+    
+    call neobundle#end()
 
 endif
 
