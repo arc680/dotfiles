@@ -103,7 +103,7 @@ if version > 703
 
     " Let NeoBundle manage NeoBundle
     NeoBundleFetch 'https://github.com/Shougo/neobundle.vim.git'
-    NeoBundle 'https://github.com/Shougo/neocomplcache.git'
+    "NeoBundle 'https://github.com/Shougo/neocomplcache.git'
     "NeoBundle 'https://github.com/Shougo/neosnippet.vim.git'
     NeoBundle 'https://github.com/Shougo/unite.vim.git'
     "NeoBundle 'https://github.com/Shougo/neocomplete.vim'
@@ -152,23 +152,23 @@ if version > 703
     " Installation check.
     NeoBundleCheck
     
-    "if neobundle#is_installed('neocomplete')
-    "    " neocomplete用設定
-    "    " Disable AutoComplPop.
-    "    let g:acp_enableAtStartup = 0
-    "    let g:neocomplete#enable_at_startup = 1
-    "    let g:neocomplete#enable_ignore_case = 1
-    "    let g:neocomplete#enable_smart_case = 1
-    "    let g:neocomplete#sources#syntax#min_keyword_length = 3
-    "    let g:neocomplete#lock_buffer_name_pattern = '¥*ku¥*'
-    "    if !exists('g:neocomplete#keyword_patterns')
-    "        let g:neocomplete#keyword_patterns = {}
-    "    endif
-    "    let g:neocomplete#keyword_patterns['default'] = '\h\w*
-    "    inoremap <expr><C-g> neocomplete#undo_completion()
-    "    inoremap <expr><C-l> neocomplete#complete_common_string()
-    "elseif neobundle#is_installed('neocomplcache')
-    if neobundle#is_installed('neocomplcache')
+    if neobundle#is_installed('neocomplete')
+        " neocomplete用設定
+        " Disable AutoComplPop.
+        let g:acp_enableAtStartup = 0
+        let g:neocomplete#enable_at_startup = 1
+        let g:neocomplete#enable_ignore_case = 1
+        let g:neocomplete#enable_smart_case = 1
+        let g:neocomplete#sources#syntax#min_keyword_length = 3
+        let g:neocomplete#lock_buffer_name_pattern = '¥*ku¥*'
+        if !exists('g:neocomplete#keyword_patterns')
+            let g:neocomplete#keyword_patterns = {}
+        endif
+        let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+        inoremap <expr><C-g> neocomplete#undo_completion()
+        inoremap <expr><C-l> neocomplete#complete_common_string()
+    elseif neobundle#is_installed('neocomplcache')
+    "if neobundle#is_installed('neocomplcache')
         " neocomplcache用設定
         " Disable AutoComplPop.
         let g:acp_enableAtStartup = 0
