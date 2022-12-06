@@ -1,7 +1,4 @@
-[include]
-  path = ~/.gitconfig.local
 [init]
 	defaultBranch = master
-[user]
-	name = arc680
-	email = arc680@live.com
+[include]
+  path = ~/.gitconfig.local
