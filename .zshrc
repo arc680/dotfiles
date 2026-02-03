@@ -8,4 +8,3 @@ fi
 
 # Customize to your needs...
 [ -f ~/.base.zsh ] && source ~/.base.zsh
-
