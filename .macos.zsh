@@ -21,6 +21,8 @@ fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+eval "$(nodenv init -)"
+
 export GOPATH=$HOME/code
 export PATH=$PATH:$GOPATH/bin
 
